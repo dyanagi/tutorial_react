@@ -13,10 +13,12 @@ class App extends Component {
   }
 
   addNinja = (ninja) => {
-    // console.log(ninja)
-    ninja.id = Math.random();
+    console.log('addNinja called with: ', ninja)
 
-    // ... is a spread operator, which spreads objects inside the ninjas, and add the new ninja at the end
+    ninja.id = Math.random();
+    console.log('ninja.id generated: ', ninja.id)
+
+    // `...` is a spread operator, which spreads objects inside the ninjas, and add the new ninja at the end
     let ninjas = [...this.state.ninjas, ninja]
 
     this.setState(({
@@ -27,12 +29,26 @@ class App extends Component {
     // // this.ninjas.push(ninja)
   }
 
+  deleteNinja = (id) => {
+    // id: passed from a child component
+    console.log('deleteNinja called with: ', id)
+
+    // `filter`: a non-destructive method
+    let ninjas = this.state.ninjas.filter(ninja => {
+      return ninja.id !== id // select all except the one with the `id`
+    })
+
+    this.setState({
+      ninjas: ninjas // Set the new array
+    })
+  }
+
   render() {
     return (
       <div className="App">
         <h1>My first React app!</h1>
         <p>Welcome :)</p>
-        <Ninjas ninjas={ this.state.ninjas }/>
+        <Ninjas deleteNinja={ this.deleteNinja } ninjas={ this.state.ninjas }/>
         <AddNinja addNinja={ this.addNinja }/>
       </div>
     );

@@ -8,6 +8,16 @@ const Ninjas = ({ ninjas, deleteNinja }) => {
         <div>Name: { ninja.name }</div>
         <div>Age: { ninja.age }</div>
         <div>Belt: { ninja.belt }</div>
+
+        {/* This implementation will invoke this function - but we just want to pass the reference */}
+        {/*<button onClick={ deleteNinja(ninja.id) }>Delete ninja</button>*/}
+
+        {/* By this implementation, we can't pass the ninja.id to delete */}
+        {/*<button onClick={ deleteNinja }>Delete ninja</button>*/}
+
+        {/* Use an arrow/anonymous function + { } then, it will be only fired on click  */}
+        <button onClick={ () => { deleteNinja(ninja.id )} }>Delete ninja</button>
+
       </div>
     ) : null;
   })

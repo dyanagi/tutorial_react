@@ -153,3 +153,23 @@ function Ninjas(props) {
   // - props.belt
 }
 ```
+
+### 19: Deleting data
+
+No parameter:
+
+```jsx harmony
+<button onClick={ deleteNinja }>Delete ninja</button>
+```
+
+This will invoke the method (Don't do):
+
+```jsx harmony
+<button onClick={ deleteNinja(ninja.id) }>Delete ninja</button>
+```
+
+To fix it, use an arrow/anonymous function + { }. Then it will be only fired on click:
+
+```jsx harmony
+<button onClick={ () => { deleteNinja(ninja.id )} }>Delete ninja</button>
+```
