@@ -1,22 +1,7 @@
 import React from 'react';
 
-const Ninjas = ({ ninjas }) => {
-  // // Using `if`
-  // const ninjaList = ninjas.map(ninja => {
-  //   if (ninja.age > 20) {
-  //     // key: unique identifier such as ID
-  //     return (
-  //       <div className="ninja" key={ ninja.id }>
-  //         <div>Name: { ninja.name }</div>
-  //         <div>Age: { ninja.age }</div>
-  //         <div>Belt: { ninja.belt }</div>
-  //       </div>
-  //     )
-  //   } else {
-  //     return null
-  //   }
-  // })
-
+// props: ninjas, deleteNinja
+const Ninjas = ({ ninjas, deleteNinja }) => {
   const ninjaList = ninjas.map(ninja => {
     return ninja.age > 20 ? (
       <div className="ninja" key={ ninja.id }>
@@ -32,6 +17,22 @@ const Ninjas = ({ ninjas }) => {
       { ninjaList }
     </div>
   )
+
+  // // Using `if`
+  // const ninjaList = ninjas.map(ninja => {
+  //   if (ninja.age > 20) {
+  //     // key: unique identifier such as ID
+  //     return (
+  //       <div className="ninja" key={ ninja.id }>
+  //         <div>Name: { ninja.name }</div>
+  //         <div>Age: { ninja.age }</div>
+  //         <div>Belt: { ninja.belt }</div>
+  //       </div>
+  //     )
+  //   } else {
+  //     return null
+  //   }
+  // })
 
 
   // // Another way to output

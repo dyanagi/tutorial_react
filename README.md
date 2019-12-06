@@ -118,3 +118,38 @@ Set the state from the ID of an field and the value of the field.
 // App.js
     <AddNinja addNinja={ this.addNinja }/>
 ```
+
+### Props
+
+```javascript
+// this.props are passed from the parent like:
+//   state = [ { name="xxx", age="xxx", belt="xxx" } ]
+//   <Ninjas ninjas={ this.state.ninjas } />
+class Ninjas extends Component {
+  render() {
+    const { ninjas } = this.props;
+  }
+}
+```
+
+```javascript
+// props are passed from the parent like:
+//   state = [ { name="xxx", age="xxx", belt="xxx" } ]
+//   <Ninjas ninjas={ this.state.ninjas } />
+const Ninjas = (props) => {
+  const { ninjas } = props;
+  // `ninjas`: Same as `props.ninjas` (Array)
+}
+```
+
+```javascript
+// props are passed from the parent like:
+//   <Ninjas name="xxx" age="xxx" belt="xxx" />
+function Ninjas(props) {
+  const { name, age, belt } = props;
+  // Set constants from:
+  // - props.name
+  // - props.age
+  // - props.belt
+}
+```
