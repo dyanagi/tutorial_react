@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ab06149b-e096-4434-af9b-a58abaacacb5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/$CACHE_FILE$" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/tutorial_react.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index05-08-functions.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index09.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myapp/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myapp/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myapp/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myapp/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myapp/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myapp/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myapp/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myapp/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myapp/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myapp/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myapp/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myapp/src/App.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myapp/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myapp/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myapp/src/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myapp/src/serviceWorker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myapp/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1UWI7aGIbVVPmwZrqcbbvSB6xoS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ab06149b-e096-4434-af9b-a58abaacacb5" name="Default Changelist" comment="" />
+      <created>1575465757263</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575465757263</updated>
+      <workItem from="1575465760279" duration="1510000" />
+      <workItem from="1575467361032" duration="3153000" />
+    </task>
+    <task id="LOCAL-00001" summary="Tutorial 1-4 State, CDN, Installation">
+      <created>1575575380397</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1575575380397</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Tutorial 1-4 State, CDN, Installation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tutorial 1-4 State, CDN, Installation" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="583" y="347" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1575572910578">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="583" y="347" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1575572910578" />
+    <state x="431" y="142" key="CommitChangelistDialog2" timestamp="1575618042326">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="431" y="142" key="CommitChangelistDialog2/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1575618042326" />
+    <state x="431" y="142" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1575575380148" />
+    <state x="108" y="125" width="1463" height="825" key="DiffContextDialog" timestamp="1575575367722">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="108" y="125" width="1463" height="825" key="DiffContextDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1575575367722" />
+    <state x="124" y="84" width="1207" height="813" key="SettingsEditor" timestamp="1575469000834">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="124" y="84" width="1207" height="813" key="SettingsEditor/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1575469000834" />
+    <state x="634" y="438" key="com.intellij.ide.util.TipDialog" timestamp="1575467361912">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="634" y="438" key="com.intellij.ide.util.TipDialog/0.23.1680.1027/1680.23.1920.1057@0.23.1680.1027" timestamp="1575467361912" />
+    <state x="2404" y="450" key="com.intellij.ide.util.TipDialog/0.23.1680.1027/1680.23.1920.1057@1680.23.1920.1057" timestamp="1575465795343" />
+  </component>
+</project>

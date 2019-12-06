@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="app"></div>
+
+  <script type="text/babel">
+    class App extends React.Component {
+      state = {
+        name: 'Michael',
+        age: 25
+      }
+      // Allow functions have a special behaviour:
+      // - binds the value of "this", pass into inside the function.
+      // - https://www.youtube.com/watch?v=XJzDF9bj368&list=PL4cUxeGkcC9ij8CfkAY2RAGb-tmkNwQHG&index=8
+      handleClick = (e) => {
+        // Don't do (Bad practice): this.state.name = ...
+        this.setState({
+          name: 'Yuka',
+          age: 30
+        })
+        console.log(this.state)
+      }
+      // https://www.youtube.com/watch?v=-ZB8I2PmiOw&list=PL4cUxeGkcC9ij8CfkAY2RAGb-tmkNwQHG&index=7
+      handleMouseOver(e) {
+        console.log(e.target, e.pageX) // cursor position
+      }
+      handleCopy(e) {
+        console.log('Try being original for once!')
+      }
+      render() {
+        return (
+          <div className="app-content">
+            <h1>Hey, ninjas</h1>
+            <p>My name is {this.state.name}, and I am {this.state.age}</p>
+            <button onClick={this.handleClick}>Click me</button>
+            <button onMouseOver={this.handleMouseOver}>Hover me</button>
+            <p onCopy={this.handleCopy}>What we think, we become</p>
+          </div>
+        )
+      }
+    }
+
+    ReactDOM.render(<App />, document.getElementById('app'));
+
+  </script>
+
+</body>
+
+</html>
