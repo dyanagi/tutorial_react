@@ -53,3 +53,7 @@ Start the server
 cd myapp
 npm start
 ```
+
+### 12: Nesting Components
+
+- `App.js`: Root Component
