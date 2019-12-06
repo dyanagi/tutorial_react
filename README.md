@@ -75,3 +75,46 @@ Functional components / UI components / Stateless components:
 - Only concerned with UI
 - Use functions to create
 
+### 17: Form
+
+Set the state from the ID of an field and the value of the field.
+
+```javascript
+  state = {
+    name: null,
+    age: null,
+    belt: null
+  }
+
+  handleChange = (e) => {
+    this.setState({
+      [e.target.id]: e.target.value
+    })
+  }
+  ```
+
+```jsx harmony
+<input type="text" id="name" onChange={ this.handleChange }/>
+```
+
+### 18: Functions and Props
+
+```jsx harmony
+// AddNinja.js
+  handleSubmit = (e) => {
+    e.preventDefault();
+    this.props.addNinja(this.state);
+  }
+```
+
+```javascript
+// App.js
+  addNinja = (ninja) => {
+    console.log(ninja)
+  }
+```
+
+```jsx harmony
+// App.js
+    <AddNinja addNinja={ this.addNinja }/>
+```

@@ -12,13 +12,28 @@ class App extends Component {
     ]
   }
 
+  addNinja = (ninja) => {
+    // console.log(ninja)
+    ninja.id = Math.random();
+
+    // ... is a spread operator, which spreads objects inside the ninjas, and add the new ninja at the end
+    let ninjas = [...this.state.ninjas, ninja]
+
+    this.setState(({
+      ninjas: ninjas // Set the new array
+    }))
+
+    // Bad practise:
+    // // this.ninjas.push(ninja)
+  }
+
   render() {
     return (
       <div className="App">
         <h1>My first React app!</h1>
         <p>Welcome :)</p>
         <Ninjas ninjas={ this.state.ninjas }/>
-        <AddNinja/>
+        <AddNinja addNinja={ this.addNinja }/>
       </div>
     );
   }
