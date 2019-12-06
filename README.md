@@ -59,3 +59,19 @@ npm start
 - `App.js`: Root Component
 - [Function and Class Components](https://reactjs.org/docs/components-and-props.html)
 
+### 15: Stateless Components
+
+Container components:
+
+- Contain state 
+- Contain lifecycle hooks
+- Not concerned with UI
+- Use classes to create
+
+Functional components / UI components / Stateless components:
+
+- Don't contain state
+- Receive data from props
+- Only concerned with UI
+- Use functions to create
+
