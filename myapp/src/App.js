@@ -6,7 +6,8 @@ function App() {
     <div className="App">
       <h1>My first React app!</h1>
       <p>Welcome :)</p>
-      <Ninja />
+      <Ninja name="Ryu" age="25" belt="black" />
+      <Ninja name="Yoshi" age="27" belt="green" />
     </div>
   );
 }

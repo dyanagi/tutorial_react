@@ -54,6 +54,8 @@ cd myapp
 npm start
 ```
 
-### 12: Nesting Components
+### 12-13: Nesting Components
 
 - `App.js`: Root Component
+- I'm using function components instead of class components. See [Function and Class Components](https://reactjs.org/docs/components-and-props.html)
+
