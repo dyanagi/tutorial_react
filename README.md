@@ -4,11 +4,14 @@ My first React tutorial project.
 
 ## Files
 
-- 1-8: single HTML files using CDN
-- 9-22: In `myapp` directory
-- 23-: In `todoapp` directory 
+- Lecture 1-8: single HTML files using CDN (Basics)
+- Lecture 9-22: In `myapp` directory (Basics)
+- Lecture 23-24: In `todoapp` directory (Todo App)
+- Lecture 25-: In `poketimes` directory (The React Router)
 
 To view the files on Mac via commands in Terminal:
+
+### Lecture 1-8
 
 ```bash
 open index01-04-state.html
@@ -18,6 +21,8 @@ open index05-08-functions.html
 open index09.html
 ```
 
+### Lecture 9-22
+
 ```bash
 cd myapp
 
@@ -26,6 +31,7 @@ npm start
 open "http://localhost:3000"
 ```
 
+### Lecture 23-24
 
 ```bash
 cd todoapp
@@ -35,6 +41,15 @@ npm start
 open "http://localhost:3000"
 ```
 
+### Lecture 25-
+
+```bash
+cd poketimes
+
+npm start
+
+open "http://localhost:3000"
+```
 
 ## References
 
