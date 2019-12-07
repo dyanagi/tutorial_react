@@ -281,3 +281,25 @@ import Home from './components/Home'
 ```
 
 At this moment, clicking a Navbar item will still send a request and reload the page.
+
+### 26 Links & NavLinks
+
+Now, let's prevent from sending a request:
+
+```jsx harmony
+<!-- Navbar.js -->
+import { Link, NavLink } from 'react-router-dom'
+```
+
+```html
+<!-- Navbar.js -->
+<ul className="right">
+  <li><Link to="/">Home</Link></li>
+  <li><NavLink to="/about">About</NavLink></li>
+  <li><NavLink to="/contact">Contact</NavLink></li>
+</ul>
+```
+
+- `Link`: No `active` CSS class
+- `NavLink`: Add `active` CSS class to the active navigation item (`a` tag)
+
