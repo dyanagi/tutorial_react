@@ -43,6 +43,16 @@ class App extends Component {
     })
   }
 
+  // Lifecycle Methods/Hooks
+  componentDidMount() {
+    console.log('component mounted')
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log('component updated')
+    console.log(prevProps, prevState)
+  }
+
   render() {
     return (
       <div className="App">

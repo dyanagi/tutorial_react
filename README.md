@@ -191,3 +191,8 @@ To fix it, use an arrow/anonymous function + { }. Then it will be only fired on 
 ```jsx harmony
 <button onClick={ () => { deleteNinja(ninja.id )} }>Delete ninja</button>
 ```
+
+### 22 Lifecycle Methods
+
+<https://www.youtube.com/watch?v=iYz2OKWO09U&list=PL4cUxeGkcC9ij8CfkAY2RAGb-tmkNwQHG&index=22>
+
