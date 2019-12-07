@@ -7,6 +7,24 @@ My first React tutorial project.
 - 1 - 8: single HTML files using CDN
 - 9: In `myapp` directory
 
+To view the files on Mac via commands in Terminal:
+
+```bash
+open index01-04-state.html
+
+open index05-08-functions.html
+
+open index09.html
+```
+
+```bash
+cd myapp
+
+npm start
+
+open "http://localhost:3000"
+```
+
 ## References
 
 Complete React Tutorial (& Redux)
