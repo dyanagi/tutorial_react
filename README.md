@@ -245,3 +245,39 @@ Set the value of an input field by `this.setState({ })`
 <input type="text" onChange={ this.handleChange }
      value={ this.state.content }/>
 ```
+
+### 25 The React Router
+
+Hint: Use the shortcut `lorem` to create a paragraph in `<p>`. (RubyMine supports it)
+
+```bash
+npm install react-router-dom
+```
+
+```jsx harmony
+// App.js
+import { BrowserRouter, Route } from 'react-router-dom'
+```
+
+Use `exact` to use exact match for such as `/`. In this case, if `exact` is not used, both `Home` and `About` will be rendered.
+
+```jsx harmony
+  return (
+    <BrowserRouter>
+      <div className="App">
+        <Navbar/>
+        <Route exact path='/' component={ Home }/>
+        <Route path='/about' component={ About }/>
+        <Route path='/contact' component={ Contact }/>
+      </div>
+    </BrowserRouter>
+  );
+```
+
+Home has to be imported:
+
+```jsx harmony
+import Home from './components/Home'
+```
+
+At this moment, clicking a Navbar item will still send a request and reload the page.
