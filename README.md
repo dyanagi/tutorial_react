@@ -221,3 +221,12 @@ Start the server
 cd myapp
 npm start
 ```
+
+### 24 Todo App (part 2)
+
+Set the value of an input field by `this.setState({ })`
+
+```jsx harmony
+<input type="text" onChange={ this.handleChange }
+     value={ this.state.content }/>
+```
