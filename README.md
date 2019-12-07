@@ -4,8 +4,9 @@ My first React tutorial project.
 
 ## Files
 
-- 1 - 8: single HTML files using CDN
-- 9: In `myapp` directory
+- 1-8: single HTML files using CDN
+- 9-22: In `myapp` directory
+- 23-: In `todoapp` directory 
 
 To view the files on Mac via commands in Terminal:
 
@@ -24,6 +25,16 @@ npm start
 
 open "http://localhost:3000"
 ```
+
+
+```bash
+cd todoapp
+
+npm start
+
+open "http://localhost:3000"
+```
+
 
 ## References
 
@@ -196,7 +207,7 @@ To fix it, use an arrow/anonymous function + { }. Then it will be only fired on 
 
 <https://www.youtube.com/watch?v=iYz2OKWO09U&list=PL4cUxeGkcC9ij8CfkAY2RAGb-tmkNwQHG&index=22>
 
-### 23 Todo App (part 1)
+### 23 Todo App (part 1) with Materialize
 
 I saw a message `"A template was not provided. This is likely because you're using an outdated version of create-react-app."` and template files were not created this time... `npm uninstall -g create-react-app` and then `npx create-react-app todoapp` to use the latest version.
 
