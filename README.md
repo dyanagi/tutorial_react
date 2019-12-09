@@ -743,3 +743,58 @@ const mapStateToProps = (state, ownProps) => {
 
 export default connect(mapStateToProps)(Post)
 ```
+
+## 42 Map Dispatch to Props (Delete a post)
+
+```jsx harmony
+// Post.js
+  handleClick = () => {
+    // rootReducer will handle it like:
+    //   if (action.type === 'DELETE_POST') { ... }
+    this.props.deletePost(this.props.post.id);
+
+    // Go back to Home
+    this.props.history.push('/');
+  }
+```
+
+```jsx harmony
+<button className="btn grey" onClick={ this.handleClick }>Delete Post</button>
+```
+
+```jsx harmony
+// Post.js
+const mapDispatchToProps = (dispatch) => {
+  return {
+    // Dispatch 'DELETE_POST' when `deletePost` function is called.
+    deletePost: (id) => {
+      dispatch({ type: 'DELETE_POST', id: id })
+    }
+  }
+}
+
+// `this.props.deletePost(id)` function will be added by passing `mapDispatchToProps`
+export default connect(mapStateToProps, mapDispatchToProps)(Post)
+```
+
+`rootReducer` will return a new state
+
+```jsx harmony
+// rootReducer.js
+const rootReducer = (state = initState, action) => {
+  console.log(action); // => {type: "DELETE_POST", id: "0"}
+
+  if (action.type === 'DELETE_POST') {
+    let newPosts = state.posts.filter(post => {
+      return action.id !== post.id
+    })
+
+    return {
+      ...state,
+      posts: newPosts
+    }
+  }
+
+  return state;
+}
+```

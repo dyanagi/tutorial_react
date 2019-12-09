@@ -22,11 +22,27 @@ class Post extends Component {
   //     })
   // }
 
+  handleClick = () => {
+    // rootReducer will handle it like:
+    //   if (action.type === 'DELETE_POST') { ... }
+    this.props.deletePost(this.props.post.id);
+
+    // Go back to Home
+    this.props.history.push('/');
+  }
+
   render() {
+    console.log(this.props)
+
     const post = this.props.post ? (
       <div className="post">
         <h4 className="center">{ this.props.post.title }</h4>
         <p>{ this.props.post.body }</p>
+        <div className="center">
+          <button className="btn grey" onClick={ this.handleClick }>
+            Delete Post
+          </button>
+        </div>
       </div>
     ) : (
       <div className="center">Loading post ...</div>
@@ -56,4 +72,14 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-export default connect(mapStateToProps)(Post)
+const mapDispatchToProps = (dispatch) => {
+  return {
+    // Dispatch 'DELETE_POST' when `deletePost` function is called.
+    deletePost: (id) => {
+      dispatch({ type: 'DELETE_POST', id: id })
+    }
+  }
+}
+
+// `this.props.deletePost(id)` function will be added by passing `mapDispatchToProps`
+export default connect(mapStateToProps, mapDispatchToProps)(Post)
