@@ -1,29 +1,34 @@
 import React, { Component } from "react";
-import axios from 'axios'
+// import axios from 'axios'
 import { Link } from 'react-router-dom'
 import Pokeball from '../pokeball.png'
+import { connect } from 'react-redux'
 
 class Home extends Component {
-  state = {
-    posts: []
-  }
-
-  componentDidMount() {
-    // `.then()` is called when the `get()` is completed
-    axios.get('https://jsonplaceholder.typicode.com/posts')
-      .then(res => {
-        console.log(res)
-
-        // (1) Set the state
-        this.setState({
-          posts: res.data.slice(0, 10)
-        })
-      })
-  }
+  // state = {
+  //   posts: []
+  // }
+  // componentDidMount() {
+  //   // `.then()` is called when the `get()` is completed
+  //   axios.get('https://jsonplaceholder.typicode.com/posts')
+  //     .then(res => {
+  //       console.log(res)
+  //
+  //       // (1) Set the state
+  //       this.setState({
+  //         posts: res.data.slice(0, 10)
+  //       })
+  //     })
+  // }
 
   render() {
-    // (2) Get the data from the state
-    const { posts } = this.state
+    console.log(this.props)
+
+    // // (2) Get the data from the state
+    // const { posts } = this.state
+
+    // Now use `this.props` instead of `this.state`
+    const { posts } = this.props
 
     // First show 'No posts yet',and then once the data is loaded, display the data.
     const postList = posts.length ? (
@@ -55,4 +60,11 @@ class Home extends Component {
   }
 }
 
-export default Home;
+const mapStateToProps = (state) => {
+  return {
+    posts: state.posts
+  }
+}
+
+// Invoke connect function passing mapStateToProps function. That will return Higher Order Component, which wraps this Home component.
+export default connect(mapStateToProps)(Home);

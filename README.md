@@ -697,3 +697,49 @@ const store = createStore(rootReducer);
 
 ReactDOM.render(<Provider store={ store }><App/></Provider>, document.getElementById('root'));
 ```
+
+## 40 Mapping State to Props
+
+```jsx harmony
+import { connect } from 'react-redux'
+
+class Home extends Component {
+  render() {
+    const { posts } = this.props
+    return (
+      <div className="container home">
+        <h4 className="center">Home</h4>
+        { postList }
+      </div>
+    )
+  }
+}
+
+const mapStateToProps = (state) => {
+  return {
+    posts: state.posts
+  }
+}
+
+// Invoke connect function passing mapStateToProps function. That will return Higher Order Component, which wraps this Home component.
+export default connect(mapStateToProps)(Home);
+```
+
+## 41 Blog Detail Page
+
+Use `ownProps` to get `post_id` and `find()` to get a `post`.
+
+```jsx harmony
+const mapStateToProps = (state, ownProps) => {
+  // Remember this piece of code:
+  //   this.props.match.params.post_id;
+
+  let id = ownProps.match.params.post_id
+
+  return {
+    post: state.posts.find(post => post.id === id)
+  }
+}
+
+export default connect(mapStateToProps)(Post)
+```
