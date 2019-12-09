@@ -798,3 +798,29 @@ const rootReducer = (state = initState, action) => {
   return state;
 }
 ```
+
+## 43 Action Creators
+
+Action Creator: Just a function.
+
+```jsx harmony
+// actions/postActions.js
+export const deletePost = (id) => {
+  return {
+    type: 'DELETE_POST',
+    id // Shorthand for `id: id`
+  }
+}
+```
+
+Now call the function instead of writing `{ type: 'DELETE_POST', id: id }`:
+
+```jsx harmony
+const mapDispatchToProps = (dispatch) => {
+  return {
+    deletePost: (id) => {
+      dispatch(deletePost(id))
+    }
+  }
+}
+```
