@@ -303,3 +303,72 @@ import { Link, NavLink } from 'react-router-dom'
 - `Link`: No `active` CSS class
 - `NavLink`: Add `active` CSS class to the active navigation item (`a` tag)
 
+## 29 Programmatic Redirects
+
+```jsx harmony
+const Contact = (props) => {
+  console.log(props)
+  
+  // Redirect to /about after 2 sec
+  setTimeout(() => {
+    props.history.push('/about');
+  }, 2000)
+}
+```
+
+## 28 Higher Order Component (HOC)
+
+A HOC supercharges the component.
+
+```jsx harmony
+import { BrowserRouter, Route } from 'react-router-dom'
+```
+
+```jsx harmony
+const Navbar = (props) => {
+  // ...
+}
+```
+
+```jsx harmony
+export default withRouter(Navbar);
+```
+
+---
+
+```jsx harmony
+// hoc/Rainbow.js
+import React from 'react'
+
+const Rainbow = (WrappedComponent) => {
+  const colours = ['red', 'pink', 'orange', 'blue', 'green', 'yellow'];
+  const randomColour = colours[Math.floor(Math.random() * 5)]
+  const className = randomColour + '-text'
+
+  return (props) => {
+    return (
+      <div className={ className }>
+        {/* Pass the props to the wrapped component again */}
+        <WrappedComponent { ...props }/>
+      </div>
+    )
+  };
+}
+
+export default Rainbow
+```
+
+To use `Rainbow.js` as a HOC in `About.js`:
+
+```jsx harmony
+// About.js
+import Rainbow from '../hoc/Rainbow'
+```
+
+```jsx harmony
+// About.js
+export default Rainbow(About);
+```
+
+Read official documentation for more information.
+
