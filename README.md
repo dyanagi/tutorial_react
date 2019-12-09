@@ -546,3 +546,123 @@ HTML in browser:
 ```html
 <img src="/static/media/pokeball.f10bf078.png" alt="A pokeball">
 ```
+
+## 34 Redux
+
+Redux: A central data store.
+
+## 35 Redux Store
+
+```jsx harmony
+// On Codepen
+const { createStore } = Redux;
+
+const initState = {
+  todos: [],
+  posts: []
+}
+
+// initState as a default value
+function myreduceer(state = initState, action){
+
+}
+
+const store = createStore(myreducer);
+```
+
+## 36 Redux Action
+
+```jsx harmony
+// On Codepen
+const { createStore } = Redux;
+
+const initState = {
+  todos: [],
+  posts: []
+}
+
+// initState as a default value
+function myreducer(state = initState, action){
+  console.log(action, state)
+}
+
+const store = createStore(myreducer);
+
+const todoAction = { type: 'ADD_TODO', todo: 'buy milk' };
+
+store.dispatch(todoAction)
+```
+
+## 37 Redux Reducers
+
+```jsx harmony
+// On Codepen
+const { createStore } = Redux;
+
+const initState = {
+  todos: [],
+  posts: []
+}
+
+// initState as a default value
+function myreducer(state = initState, action){
+  if (action.type === 'ADD_TODO') {
+    return {
+      todos: [...state.todos, action.todo] // Add a new todo
+    }
+  }
+}
+
+const store = createStore(myreducer);
+
+const todoAction = { type: 'ADD_TODO', todo: 'buy milk' };
+
+store.dispatch(todoAction)
+```
+
+## 38 Store Subscriptions
+
+```jsx harmony
+// On Codepen
+const { createStore } = Redux;
+
+const initState = {
+  todos: [],
+  posts: []
+}
+
+// initState as a default value
+function myreducer(state = initState, action){
+  if (action.type === 'ADD_TODO') {
+    return {
+      ...state, // pass all (todos, posts
+      todos: [...state.todos, action.todo] // Override `todos` and Add a new todo
+    }
+  }
+
+  if (action.type === 'ADD_POST') {
+    return {
+      ...state, // pass all (todos, posts
+      post: [...state.posts, action.post] // Override `todos` and Add a new todo
+    }
+  }
+}
+
+const store = createStore(myreducer);
+
+store.subscribe(() => {
+  console.log('state updated');
+  console.log(store.getState());
+  // => Object { posts: [], todos: ["buy milk"] }
+})
+
+store.dispatch({ type: 'ADD_TODO', todo: 'buy milk' })
+store.dispatch({ type: 'ADD_TODO', todo: 'sleep some more' })
+
+store.dispatch({ type: 'ADD_POST', post: 'Egg hunt with Yoshi' })
+```
+
+1. Dispatch Action: `store.dispatch`
+2. Reducer updates the central state: `myreducer`
+3. Component subscribes to change: `store.subscribe` will log the state this time.
+
