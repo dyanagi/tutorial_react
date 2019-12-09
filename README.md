@@ -7,7 +7,7 @@ My first React tutorial project.
 - Lecture 1-8: single HTML files using CDN (Basics)
 - Lecture 9-22: In `myapp` directory (Basics)
 - Lecture 23-24: In `todoapp` directory (Todo App)
-- Lecture 25-: In `poketimes` directory (The React Router)
+- Lecture 25-43: In `poketimes` directory (The React Router)
 
 To view the files on Mac via commands in Terminal:
 
@@ -824,3 +824,7 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 ```
+
+## Next Course
+
+[React, Redux & Firebase App Tutorial #1 - Introduction](https://www.youtube.com/watch?v=Oi4v5uxTY5o&list=PL4cUxeGkcC9iWstfXntcj8f-dFZ4UtlN3)
