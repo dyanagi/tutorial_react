@@ -437,3 +437,27 @@ class Home extends Component {
 
 export default Home;
 ```
+
+## 30 Route Parameters (part 1)
+
+```jsx harmony
+// App.js
+    <BrowserRouter>
+      <Route path="/:post_id" component={ Post }/>
+    </BrowserRouter>
+```
+
+```jsx harmony
+// Post.js
+class Post extends Component {
+  // ...
+  componentDidMount() {
+    let id = this.props.match.params.post_id
+
+    this.setState({
+      id: id
+    })
+  }
+  // ...
+}
+```
