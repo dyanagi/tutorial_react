@@ -512,3 +512,19 @@ class Post extends Component {
 
 Issue: `/contact` can match with `/:post_id`, so `Post.js` is rendered in `/contact`.
 
+## 32 Switch Tag
+
+The issue was solved by adding `<Switch>` tag.
+
+```jsx harmony
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+```
+
+```jsx harmony
+<Switch>
+  <Route exact path='/' component={ Home }/>
+  <Route path='/about' component={ About }/>
+  <Route path='/contact' component={ Contact }/>
+  <Route path="/:post_id" component={ Post }/>
+</Switch>
+```
