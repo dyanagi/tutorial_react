@@ -666,3 +666,34 @@ store.dispatch({ type: 'ADD_POST', post: 'Egg hunt with Yoshi' })
 2. Reducer updates the central state: `myreducer`
 3. Component subscribes to change: `store.subscribe` will log the state this time.
 
+## 39 Setting up Redux in React
+
+```bash
+cd poketimes
+
+npm install redux react-redux
+```
+
+```jsx harmony
+// reducers/rootReducer.js
+const initState = {
+  posts: []
+}
+
+const rootReducer = (state = initState, action) => {
+  return state;
+}
+
+export default rootReducer;
+```
+
+```jsx harmony
+// index.js
+import { createStore } from 'redux';
+import { Provider } from 'react-redux'
+import rootReducer from "./reducers/rootReducer";
+
+const store = createStore(rootReducer);
+
+ReactDOM.render(<Provider store={ store }><App/></Provider>, document.getElementById('root'));
+```
