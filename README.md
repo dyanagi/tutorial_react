@@ -2,6 +2,10 @@
 
 My first React tutorial project.
 
+## The Course
+
+YouTube: <https://www.youtube.com/watch?v=OxIDLw0M-m0&list=PL4cUxeGkcC9ij8CfkAY2RAGb-tmkNwQHG>
+
 ## Files
 
 - Lecture 1-8: single HTML files using CDN (Basics)
@@ -50,13 +54,6 @@ npm start
 
 open "http://localhost:3000"
 ```
-
-## References
-
-Complete React Tutorial (& Redux)
-
-- <https://www.youtube.com/watch?v=OxIDLw0M-m0&list=PL4cUxeGkcC9ij8CfkAY2RAGb-tmkNwQHG>
-- <https://github.com/iamshaunjp/react-redux-complete-playlist>
 
 ## Notes
 
