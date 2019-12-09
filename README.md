@@ -528,3 +528,21 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
   <Route path="/:post_id" component={ Post }/>
 </Switch>
 ```
+
+## 33 Importing Images
+
+Just import the image and pass through `src={ }`.
+
+```jsx harmony
+import Pokeball from '../pokeball.png'
+```
+
+```jsx harmony
+<img src={ Pokeball } alt="A pokeball"/>
+```
+
+HTML in browser:
+
+```html
+<img src="/static/media/pokeball.f10bf078.png" alt="A pokeball">
+```
