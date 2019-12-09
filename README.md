@@ -461,3 +461,54 @@ class Post extends Component {
   // ...
 }
 ```
+
+## 30 Route Parameters (part 2)
+
+Create a link from ID:
+
+```jsx harmony
+<Link to={ '/' + post.id }>
+  { post.title }
+</Link>
+```
+
+Get data for the post and render:
+
+```jsx harmony
+class Post extends Component {
+  state = {
+    post: null
+  }
+
+  componentDidMount() {
+    let id = this.props.match.params.post_id;
+    axios.get('https://jsonplaceholder.typicode.com/posts/' + id)
+      .then(res => {
+        this.setState({
+          post: res.data
+        })
+        console.log(res)
+      })
+  }
+
+  render() {
+    const post = this.state.post ? (
+      <div className="post">
+        <h4 className="center">{ this.state.post.title }</h4>
+        <p>{ this.state.post.body }</p>
+      </div>
+    ) : (
+      <div className="center">Loading post ...</div>
+    )
+
+    return (
+      <div className="container">
+        { post }
+      </div>
+    )
+  }
+}
+```
+
+Issue: `/contact` can match with `/:post_id`, so `Post.js` is rendered in `/contact`.
+
