@@ -60,6 +60,7 @@ class App extends Component {
         <p>Welcome :)</p>
         <Ninjas deleteNinja={ this.deleteNinja } ninjas={ this.state.ninjas }/>
         <AddNinja addNinja={ this.addNinja }/>
+        <p>React Version: { React.version }</p>
       </div>
     );
   }
