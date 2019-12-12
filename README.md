@@ -12,6 +12,7 @@ YouTube: <https://www.youtube.com/watch?v=OxIDLw0M-m0&list=PL4cUxeGkcC9ij8CfkAY2
 - Lecture 9-22: In `myapp` directory (Basics)
 - Lecture 23-24: In `todoapp` directory (Todo App)
 - Lecture 25-43: In `poketimes` directory (The React Router)
+- (After the course) A1-: Updated `poketimes` (More tips)
 
 To view the files on Mac via commands in Terminal:
 
@@ -825,3 +826,61 @@ const mapDispatchToProps = (dispatch) => {
 ## Next Course
 
 [React, Redux & Firebase App Tutorial #1 - Introduction](https://www.youtube.com/watch?v=Oi4v5uxTY5o&list=PL4cUxeGkcC9iWstfXntcj8f-dFZ4UtlN3)
+
+---
+
+## A1 CSS Modules (Scoped/Non-Scoped CSS)
+
+### Naming rule
+
+- Filename: `NAME.module.css` or `NAME.module.scss`
+- Class name: [camelCase is recommended](https://github.com/css-modules/css-modules#naming)
+
+```
+import './App.css'; // Loading non-scoped CSS. This will automatically apply.
+import styles from './App.module.css'; // NAME.module.css/scss can be used for scoped CSS
+```
+
+```html
+<div className='nonScopedClassTest'>nonScopedClassTest</div>
+<div className={styles.scopedClassTest}>scopedClassTest</div>
+```
+
+or
+
+```
+import { scopedClassTest } from './App.module.css'; // NAME.module.css/scss can be used for scoped CSS
+<div className={scopedClassTest}>scopedClassTest</div>
+```
+
+Output
+
+```html
+<!-- Non-scoped class name -->
+<div class="nonScopedClassTest">nonScopedClassTest</div>
+
+<!--Scoped class name -->
+<div class="App_scopedClassTest__1M3Pt">scopedClassTest</div>
+```
+
+### Multiple classnames with CSS Modules in React
+
+```bash
+yarn add namespace
+```
+
+```
+import cx from 'classnames'
+```
+
+```html
+// Joining multiple CSS Modules classes
+// <div class="foo-f93d72 bar-g9493s"></div>
+<div className={cx(styles.foo, styles.bar)} />
+
+// Conditionally displaying multiple CSS Modules classes
+// <div class="foo-f93d72"></div>
+<div className={cx(styles.foo, {[styles.bar]: false})} />
+```
+
+Reference: <https://zeph.co/multiple-classnames-css-modules-react>
