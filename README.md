@@ -216,11 +216,11 @@ To fix it, use an arrow/anonymous function + { }. Then it will be only fired on 
 <button onClick={ () => { deleteNinja(ninja.id )} }>Delete ninja</button>
 ```
 
-### 22 Lifecycle Methods
+### 22: Lifecycle Methods
 
 <https://www.youtube.com/watch?v=iYz2OKWO09U&list=PL4cUxeGkcC9ij8CfkAY2RAGb-tmkNwQHG&index=22>
 
-### 23 Todo App (part 1) with Materialize
+### 23: Todo App (part 1) with Materialize
 
 I saw a message `"A template was not provided. This is likely because you're using an outdated version of create-react-app."` and template files were not created this time... `npm uninstall -g create-react-app` and then `npx create-react-app todoapp` to use the latest version.
 
@@ -235,7 +235,7 @@ cd myapp
 npm start
 ```
 
-### 24 Todo App (part 2)
+### 24: Todo App (part 2)
 
 Set the value of an input field by `this.setState({ })`
 
@@ -244,7 +244,7 @@ Set the value of an input field by `this.setState({ })`
      value={ this.state.content }/>
 ```
 
-### 25 The React Router
+### 25: The React Router
 
 Hint: Use the shortcut `lorem` to create a paragraph in `<p>`. (RubyMine supports it)
 
@@ -280,7 +280,7 @@ import Home from './components/Home'
 
 At this moment, clicking a Navbar item will still send a request and reload the page.
 
-### 26 Links & NavLinks
+### 26: Links & NavLinks
 
 Now, let's prevent from sending a request:
 
@@ -301,7 +301,7 @@ import { Link, NavLink } from 'react-router-dom'
 - `Link`: No `active` CSS class
 - `NavLink`: Add `active` CSS class to the active navigation item (`a` tag)
 
-## 29 Programmatic Redirects
+## 27: Programmatic Redirects
 
 ```jsx harmony
 const Contact = (props) => {
@@ -314,7 +314,7 @@ const Contact = (props) => {
 }
 ```
 
-## 28 Higher Order Component (HOC)
+## 28: Higher Order Component (HOC)
 
 A HOC supercharges the component.
 
@@ -370,7 +370,7 @@ export default Rainbow(About);
 
 Read official documentation for more information.
 
-## 29 Axios
+## 29: Axios
 
 ```bash
 cd poketimes
@@ -436,7 +436,7 @@ class Home extends Component {
 export default Home;
 ```
 
-## 30 Route Parameters (part 1)
+## 30: Route Parameters (part 1)
 
 ```jsx harmony
 // App.js
@@ -460,7 +460,7 @@ class Post extends Component {
 }
 ```
 
-## 30 Route Parameters (part 2)
+## 31: Route Parameters (part 2)
 
 Create a link from ID:
 
@@ -510,7 +510,7 @@ class Post extends Component {
 
 Issue: `/contact` can match with `/:post_id`, so `Post.js` is rendered in `/contact`.
 
-## 32 Switch Tag
+## 32: Switch Tag
 
 The issue was solved by adding `<Switch>` tag.
 
@@ -527,7 +527,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 </Switch>
 ```
 
-## 33 Importing Images
+## 33: Importing Images
 
 Just import the image and pass through `src={ }`.
 
@@ -545,11 +545,11 @@ HTML in browser:
 <img src="/static/media/pokeball.f10bf078.png" alt="A pokeball">
 ```
 
-## 34 Redux
+## 34: Redux
 
 Redux: A central data store.
 
-## 35 Redux Store
+## 35: Redux Store
 
 ```jsx harmony
 // On Codepen
@@ -568,7 +568,7 @@ function myreduceer(state = initState, action){
 const store = createStore(myreducer);
 ```
 
-## 36 Redux Action
+## 36: Redux Action
 
 ```jsx harmony
 // On Codepen
@@ -591,7 +591,7 @@ const todoAction = { type: 'ADD_TODO', todo: 'buy milk' };
 store.dispatch(todoAction)
 ```
 
-## 37 Redux Reducers
+## 37: Redux Reducers
 
 ```jsx harmony
 // On Codepen
@@ -618,7 +618,7 @@ const todoAction = { type: 'ADD_TODO', todo: 'buy milk' };
 store.dispatch(todoAction)
 ```
 
-## 38 Store Subscriptions
+## 38: Store Subscriptions
 
 ```jsx harmony
 // On Codepen
@@ -664,7 +664,7 @@ store.dispatch({ type: 'ADD_POST', post: 'Egg hunt with Yoshi' })
 2. Reducer updates the central state: `myreducer`
 3. Component subscribes to change: `store.subscribe` will log the state this time.
 
-## 39 Setting up Redux in React
+## 39: Setting up Redux in React
 
 ```bash
 cd poketimes
@@ -696,7 +696,7 @@ const store = createStore(rootReducer);
 ReactDOM.render(<Provider store={ store }><App/></Provider>, document.getElementById('root'));
 ```
 
-## 40 Mapping State to Props
+## 40: Mapping State to Props
 
 ```jsx harmony
 import { connect } from 'react-redux'
@@ -723,7 +723,7 @@ const mapStateToProps = (state) => {
 export default connect(mapStateToProps)(Home);
 ```
 
-## 41 Blog Detail Page
+## 41: Blog Detail Page
 
 Use `ownProps` to get `post_id` and `find()` to get a `post`.
 
@@ -742,7 +742,7 @@ const mapStateToProps = (state, ownProps) => {
 export default connect(mapStateToProps)(Post)
 ```
 
-## 42 Map Dispatch to Props (Delete a post)
+## 42: Map Dispatch to Props (Delete a post)
 
 ```jsx harmony
 // Post.js
@@ -797,7 +797,7 @@ const rootReducer = (state = initState, action) => {
 }
 ```
 
-## 43 Action Creators
+## 43: Action Creators
 
 Action Creator: Just a function.
 
@@ -823,7 +823,7 @@ const mapDispatchToProps = (dispatch) => {
 }
 ```
 
-## Next Course
+## 44: Next Course (End of the Tutorial)
 
 [React, Redux & Firebase App Tutorial #1 - Introduction](https://www.youtube.com/watch?v=Oi4v5uxTY5o&list=PL4cUxeGkcC9iWstfXntcj8f-dFZ4UtlN3)
 
