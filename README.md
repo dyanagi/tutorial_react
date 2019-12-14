@@ -884,3 +884,10 @@ import cx from 'classnames'
 ```
 
 Reference: <https://zeph.co/multiple-classnames-css-modules-react>
+
+### File extension: `js` vs `jsx`
+
+Use `.js`
+
+Reference: <https://github.com/facebook/create-react-app/releases/tag/v0.4.1>
+
